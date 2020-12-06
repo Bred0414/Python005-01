@@ -30,7 +30,7 @@ def requests_get():
         data['价格'].loc[i] = money[i].strip().lstrip()
         data['连接'].loc[i] = link[i]
         if data['价格'].loc[i] == '':
-            data['价格'].loc[i] = "商品下架过期"
+            data['价格'].loc[i] = "商品优惠过期"
 
     data.to_excel('最新智能手机热度前30名.xlsx')
 
