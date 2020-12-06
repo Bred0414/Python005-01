@@ -24,8 +24,8 @@ def backup_file_client(inputFilePath: str):
                 receivedBinary += s.recv(1024)
                 data = f.read(1024)
 
-    except Exception:
-        print("The file cannot be open or file is not exist")
+    except Exception as e:
+        print("The file cannot be open or file is not exist: {}".format(e))
         sys.exit(1)
 
     try:
